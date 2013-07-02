@@ -1,0 +1,14 @@
+Package: Foo
+Type: Package
+Title: Template
+Version: 1.0
+Date: 2013-7-2
+Depends: R (>= 2.15.0), MASS, mvtnorm, nlme
+Suggests: Hmisc, maps, xtable
+Author: Eli Holmes, NOAA, Seattle, USA
+Maintainer: Elizabeth Holmes - NOAA Federal <eli.holmes@noaa.gov>
+Description: This is a template to show you how a package works.
+License: GPL-2
+LazyData: yes
+BuildVignettes: yes
+ByteCompile: TRUE

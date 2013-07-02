@@ -1,0 +1,105 @@
+%\VignetteIndexEntry{foo Guide}
+%\VignettePackage{foo}
+\documentclass[12pt]{article}
+\usepackage[landscape]{geometry}
+\usepackage{hyperref}
+
+%\input{tex/mathdefs}
+\usepackage{amsmath} % the standard math package
+%%%% bold maths symbol system:
+\def\AA{\mbox{$\mathbf A$}}
+\def\aa{\mbox{$\mathbf a$}}
+\def\BB{\mbox{$\mathbf B$}}
+\def\bb{\mbox{$\mathbf b$}}
+\def\CC{\mbox{$\mathbf C$}}
+\def\cc{\mbox{$\mathbf c$}}
+\def\DD{\mbox{$\mathbf D$}}
+\def\dd{\mbox{$\mathbf d$}}
+\def\EE{\mbox{$\mathbf E$}}
+\def\ee{\mbox{$\mathbf e$}}
+\def\FF{\mbox{$\mathbf F$}}
+\def\ff{\mbox{$\mathbf f$}}
+\def\gg{\mbox{$\mathbf g$}}
+\def\GG{\mbox{$\mathbf G$}}
+\def\HH{\mbox{$\mathbf H$}}
+\def\II{\mbox{$\mathbf I$}}
+\def\LL{\mbox{$\mathbf L$}}
+\def\MM{\mbox{$\mathbf M$}}
+\def\mm{\mbox{$\mathbf m$}}
+\def\OO{\mbox{$\mathbf O$}}
+\def\PP{\mbox{$\mathbf P$}}
+\def\pp{\mbox{$\mathbf p$}}
+\def\QQ{\mbox{$\mathbf Q$}}
+\def\qq{\mbox{$\mathbf q$}}
+\def\RR{\mbox{$\mathbf R$}}
+\def\rr{\mbox{$\mathbf r$}}
+\def\UU{\mbox{$\mathbf U$}}
+\def\uu{\mbox{$\mathbf u$}}
+\def\VV{\mbox{$\mathbf V$}}
+\def\vv{\mbox{$\mathbf v$}}
+\def\WW{\mbox{$\mathbf W$}}
+\def\ww{\mbox{$\mathbf w$}}
+\def\XX{\mbox{$\mathbf X$}}
+\def\xx{\mbox{$\mathbf x$}}
+\def\YY{\mbox{$\mathbf Y$}}
+\def\yy{\mbox{$\mathbf y$}}
+\def\ZZ{\mbox{$\mathbf Z$}}
+\def\zz{\mbox{$\mathbf z$}}
+\def\et{\mbox{\boldmath $\eta$}}
+\def\ep{\mbox{\boldmath $\epsilon$}}
+\def\pipi{\mbox{\boldmath $\pi$}}
+\def\uupsilon{\pmb{\upsilon}}
+\def\llambda{\pmb{\lambda}}
+\def\bbeta{\pmb{\beta}}
+\def\aalpha{\pmb{\alpha}}
+\def\zzeta{\pmb{\zeta}}
+\def\etaeta{\mbox{\boldmath $\eta$}}
+\def\xixi{\mbox{\boldmath $\xi$}}
+\def\PI{\mbox{\boldmath $\mathrm{\Pi}$}}
+\def\LAM{\mbox{\boldmath $\mathrm{\Lambda}$}}
+\def\GAM{\mbox{\boldmath $\mathrm{\Gamma}$}}
+\def\SI{\mbox{\boldmath $\mathrm{\Sigma}$}}
+\def\TH{\mbox{\boldmath $\mathrm{\Theta}$}}
+\def\PH{\mbox{\boldmath $\mathrm{\Phi}$}}
+\def\zer{\mbox{\boldmath $0$}}
+\def\vec{\,\textup{\textrm{vec}}}
+\def\var{\,\textup{\textrm{var}}}
+\def\cov{\,\textup{\textrm{cov}}}
+\def\MVN{\,\textup{\textrm{MVN}}}
+\def\AIC{\,\textup{\textrm{AIC}}}
+\def\E{\,\textup{\textrm{E}}}
+\def\Lik{\,\textup{\textrm{L}}}
+\def\N{\,\textup{\textrm{N}}}
+\def\R{R}
+
+\title{Foo Guide}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+<<RUNFIRST, echo=FALSE>>=
+library(Foo)
+options(prompt=" ", continue=" ")
+@
+\section*{Foo Quick Start Guide}
+Here is an equation that has nothin to do with foo:
+\begin{equation}\label{eqn:marss}
+\begin{gathered}
+\xx_t = \BB_t\xx_{t-1} + \uu_t + \CC_t\cc_t + \ww_t, \text{ where } \ww_t \sim \MVN(0,\QQ_t)\\
+\yy_t = \ZZ_t\xx_t + \aa_t + \DD_t\dd_t + \vv_t, \text{ where } \vv_t \sim \MVN(0,\RR_t)\\
+\xx_1 \sim \MVN(\pipi,\LAM) \text{ or } \xx_0 \sim \MVN(\pipi,\LAM)
+\end{gathered}
+\end{equation}
+$\cc$ and $\dd$ are inputs and must have no missing values.  
+
+\section{Here is some foo code}
+Let's run foo
+<<foo1>>=
+foo("dog",1)
+@
+That was boring.
+<<foo2>>=
+foo(1,1)
+@
+<<Reset, echo=FALSE>>=
+options(prompt="> ", continue="+ ")
+@
+\end{document}
